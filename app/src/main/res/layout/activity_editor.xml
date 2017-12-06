@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.amrezzat.inventoryapp.EditorActivity">
+
+    <ImageView
+        android:id="@+id/Editor_ProductImage"
+        android:layout_width="@dimen/PimageWandH"
+        android:layout_height="@dimen/PimageWandH"
+        android:onClick="ImageAction"
+        android:src="@android:drawable/ic_menu_gallery" />
+
+    <EditText
+        android:id="@+id/Editor_ProductName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margen"
+        android:layout_toRightOf="@id/Editor_ProductImage"
+        android:hint="@string/H_productName"
+        android:paddingTop="@dimen/padingPhotoTop" />
+
+    <EditText
+        android:id="@+id/Editor_ProductPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/margen"
+        android:hint="@string/H_productprice"
+        android:inputType="number"
+        android:textSize="@dimen/PriceSize" />
+
+    <!--Quantity Group-->
+    <RelativeLayout
+        android:id="@+id/Quantity_Container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Editor_ProductName"
+        android:layout_margin="@dimen/margen"
+        android:paddingTop="@dimen/PadingQuantityContaianerTop">
+
+        <EditText
+            android:id="@+id/Editor_ProductQuantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/margen"
+            android:hint="@string/H_ProductQuantity"
+            android:inputType="number"
+            android:textColor="@color/colorAccent" />
+
+        <ImageButton
+            android:id="@+id/IncreaseBtn_quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/Editor_ProductQuantity"
+            android:onClick="Btn_IncreaseQuantity"
+            android:src="@android:drawable/ic_input_add" />
+
+        <ImageButton
+            android:id="@+id/decreaseBtn_quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/decreasebtn_marginTop"
+            android:layout_toLeftOf="@id/Editor_ProductQuantity"
+            android:onClick="Btn_DecreaseQuantity"
+            android:src="@android:drawable/button_onoff_indicator_on" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/Editor_ProductDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Quantity_Container"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/margen"
+        android:hint="@string/ProductDescription"
+        android:paddingTop="@dimen/PadingDiscribtionTop"
+        android:textSize="@dimen/DescriptionTextSize" />
+    <!-- btn Groub-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/margen">
+
+        <Button
+            android:id="@+id/EditorBtn_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="Btn_delete"
+            android:text="@string/btn_delet" />
+
+        <Button
+            android:id="@+id/EditorBtn_OrderMore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:onClick="Btn_OrderMore"
+            android:text="@string/orderMore" />
+
+        <Button
+            android:id="@+id/EditorBtn_Save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:onClick="Btn_Save"
+            android:text="@string/Save" />
+    </RelativeLayout>
+
+</RelativeLayout>

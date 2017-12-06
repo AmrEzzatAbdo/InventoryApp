@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">InventoryApp</string>
+    <string name="action_settings">Delete All</string>
+    <string name="EmptyView">to insert/populate new product press on floating button \\n and insert product detail</string>
+    <string name="Sale">Sale</string>
+    <string name="H_productName">Product Name</string>
+    <string name="H_productprice">0 LE</string>
+    <string name="H_ProductQuantity">0 pieces</string>
+    <string name="ProductDescription">Description</string>
+    <string name="btn_delet">delete</string>
+    <string name="orderMore">Order More</string>
+    <string name="Save">Save</string>
+</resources>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/Product_Image"
+        android:layout_width="@dimen/PimageWandH"
+        android:layout_height="@dimen/PimageWandH"
+        android:layout_margin="@dimen/margen"
+        android:focusable="false"
+        android:src="@android:drawable/ic_menu_gallery" />
+
+    <TextView
+        android:id="@+id/Product_Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margen"
+        android:layout_toRightOf="@id/Product_Image"
+        android:focusable="false"
+        android:paddingTop="@dimen/padingPhotoTop" />
+
+    <TextView
+        android:id="@+id/Product_Price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/margen"
+        android:focusable="false"
+        android:paddingTop="@dimen/padingPriceTope"
+        android:textSize="@dimen/PriceSize" />
+
+    <TextView
+        android:id="@+id/Product_Quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Product_Price"
+        android:layout_centerHorizontal="true"
+        android:focusable="false" />
+
+    <TextView
+        android:id="@+id/Product_Description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Product_Image"
+        android:layout_centerHorizontal="true"
+        android:focusable="false"
+        android:fontFamily="cursive"
+        android:textSize="@dimen/DescriptionTextSize" />
+
+    <Button
+        android:id="@+id/Sale_Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/Product_Description"
+        android:layout_margin="@dimen/margen"
+        android:focusable="false"
+        android:text="@string/Sale" />
+
+</RelativeLayout>
